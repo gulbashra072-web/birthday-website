@@ -1,0 +1,957 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Happy Birthday Meri Jaan  ❤️</title>
+
+    <style>
+
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            overflow: hidden;
+            font-family: Georgia, serif;
+            background: #fce8e8;
+        }
+
+        /* =========================
+           MAIN BIRTHDAY PAGE
+        ========================== */
+
+        .birthday-page {
+            width: 100%;
+            height: 100vh;
+            position: relative;
+            overflow: hidden;
+
+            background-color: #ffecec;
+
+            background-image:
+                linear-gradient(#ffffff 1px, transparent 1px),
+                linear-gradient(90deg, #ffffff 1px, transparent 1px);
+
+            background-size: 35px 35px;
+        }
+
+
+        /* =========================
+           TOP DECORATION
+        ========================== */
+
+        .top-decoration {
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 130px;
+        }
+
+        .flag {
+            position: absolute;
+            top: 20px;
+            width: 45px;
+            height: 50px;
+            background: #f47b8a;
+
+            clip-path: polygon(
+                0 0,
+                100% 0,
+                50% 100%
+            );
+        }
+
+        .flag1 { left: 3%; transform: rotate(12deg); }
+        .flag2 { left: 8%; transform: rotate(8deg); }
+        .flag3 { left: 13%; transform: rotate(5deg); }
+        .flag4 { left: 18%; transform: rotate(2deg); }
+
+        .flag5 { right: 18%; transform: rotate(-2deg); }
+        .flag6 { right: 13%; transform: rotate(-5deg); }
+        .flag7 { right: 8%; transform: rotate(-8deg); }
+        .flag8 { right: 3%; transform: rotate(-12deg); }
+
+
+        /* =========================
+           LEFT CONTENT
+        ========================== */
+
+        .left-content {
+            position: absolute;
+
+            left: 7%;
+            top: 25%;
+
+            text-align: center;
+        }
+
+        .happy {
+            font-family: Arial, sans-serif;
+
+            font-size: 65px;
+            font-weight: 900;
+
+            color: white;
+
+            -webkit-text-stroke: 4px #292929;
+
+            text-shadow:
+                6px 6px 0px #292929;
+        }
+
+        .birthday {
+            font-family: Arial, sans-serif;
+
+            font-size: 65px;
+            font-weight: 900;
+
+            color: #f06b78;
+
+            -webkit-text-stroke: 4px #292929;
+
+            text-shadow:
+                6px 6px 0px #292929;
+        }
+
+
+        /* =========================
+           DATE
+        ========================== */
+
+        .date {
+            margin-top: 25px;
+
+            width: 270px;
+
+            padding: 10px;
+
+            border-radius: 30px;
+
+            background: #f77888;
+
+            border: 3px solid #222;
+
+            font-weight: bold;
+
+            font-size: 18px;
+
+            margin-left: auto;
+            margin-right: auto;
+        }
+
+
+        /* =========================
+           MESSAGE BUTTON
+        ========================== */
+
+        .message-button {
+
+            margin-top: 25px;
+
+            padding: 12px 25px;
+
+            border-radius: 30px;
+
+            background: #f77888;
+
+            border: 3px solid #222;
+
+            font-size: 16px;
+
+            font-weight: bold;
+
+            cursor: pointer;
+
+            transition: 0.3s;
+        }
+
+        .message-button:hover {
+
+            transform: scale(1.08);
+
+            background: #ff9aa5;
+        }
+
+
+        /* =========================
+           RIGHT PHOTO
+        ========================== */
+
+        .photo-area {
+
+            position: absolute;
+
+            right: 15%;
+
+            top: 25%;
+
+            text-align: center;
+        }
+
+
+        .photo-circle {
+
+            width: 350px;
+            height: 350px;
+
+            border-radius: 50%;
+
+            background: #d4bd72;
+
+            border: 7px solid #333;
+
+            overflow: hidden;
+
+            box-shadow: 0 5px 15px rgba(0,0,0,0.2);
+        }
+
+
+        .photo-circle img {
+
+            width: 100%;
+            height: 100%;
+
+            object-fit: cover;
+        }
+
+
+        .name-label {
+
+            width: 280px;
+
+            margin: -10px auto 0;
+
+            padding: 8px;
+
+            background: #f77888;
+
+            border: 3px solid #333;
+
+            border-radius: 30px;
+
+            font-family: cursive;
+
+            font-size: 22px;
+
+            position: relative;
+        }
+
+
+        /* =========================
+           BALLOONS
+        ========================== */
+
+        .balloon {
+
+            position: absolute;
+
+            width: 70px;
+            height: 90px;
+
+            border-radius: 50%;
+
+            animation: floating 3s ease-in-out infinite;
+        }
+
+        .balloon::after {
+
+            content: "";
+
+            position: absolute;
+
+            width: 2px;
+            height: 100px;
+
+            background: #333;
+
+            left: 50%;
+
+            top: 85px;
+        }
+
+
+        .pink {
+            background: #ff8997;
+        }
+
+        .yellow {
+            background: #ffd84d;
+        }
+
+        .red {
+            background: #f15c70;
+        }
+
+
+        .balloon1 {
+
+            left: 52%;
+            top: 18%;
+
+        }
+
+        .balloon2 {
+
+            right: 10%;
+            top: 35%;
+
+            animation-delay: 1s;
+
+        }
+
+        .balloon3 {
+
+            right: 3%;
+            bottom: 12%;
+
+            animation-delay: 2s;
+
+        }
+
+
+        @keyframes floating {
+
+            0%, 100% {
+                transform: translateY(0);
+            }
+
+            50% {
+                transform: translateY(-20px);
+            }
+
+        }
+
+
+        /* =========================
+           SMALL DECORATIONS
+        ========================== */
+
+        .star {
+
+            position: absolute;
+
+            font-size: 25px;
+
+            color: #222;
+
+            animation: sparkle 2s infinite;
+        }
+
+        .star1 {
+            left: 3%;
+            top: 40%;
+        }
+
+        .star2 {
+            left: 35%;
+            top: 20%;
+        }
+
+        .star3 {
+            left: 42%;
+            bottom: 18%;
+        }
+
+        .star4 {
+            right: 25%;
+            top: 15%;
+        }
+
+
+        @keyframes sparkle {
+
+            50% {
+                transform: scale(1.4);
+            }
+
+        }
+
+
+        /* =========================
+           CARD OVERLAY
+        ========================== */
+
+        .card-overlay {
+
+            position: fixed;
+
+            inset: 0;
+
+            background: rgba(0,0,0,0.72);
+
+            display: none;
+
+            justify-content: center;
+
+            align-items: center;
+
+            z-index: 100;
+
+            padding: 20px;
+        }
+
+
+        .card-overlay.active {
+
+            display: flex;
+        }
+
+
+        /* =========================
+           CLOSE BUTTON
+        ========================== */
+
+        .close {
+
+            position: fixed;
+
+            top: 25px;
+            right: 30px;
+
+            font-size: 40px;
+
+            color: white;
+
+            cursor: pointer;
+
+            z-index: 200;
+
+        }
+
+
+        /* =========================
+           BIRTHDAY CARD
+        ========================== */
+
+        .card {
+
+            width: 850px;
+
+            max-width: 95%;
+
+            min-height: 500px;
+
+            display: flex;
+
+            background: #f87987;
+
+            box-shadow:
+                0 0 30px rgba(255,255,255,0.3);
+
+            transform: rotate(-1deg);
+
+            animation: cardOpen 0.8s ease;
+
+            border-radius: 3px;
+
+            overflow: hidden;
+        }
+
+
+        @keyframes cardOpen {
+
+            from {
+
+                transform:
+                    scale(0.3)
+                    rotate(-15deg);
+
+                opacity: 0;
+            }
+
+            to {
+
+                transform:
+                    scale(1)
+                    rotate(-1deg);
+
+                opacity: 1;
+            }
+
+        }
+
+
+        /* =========================
+           LEFT SIDE CARD
+        ========================== */
+
+        .card-left {
+
+            width: 42%;
+
+            display: flex;
+
+            flex-direction: column;
+
+            justify-content: center;
+
+            align-items: center;
+
+            text-align: center;
+
+            padding: 30px;
+
+            border-right: 5px solid white;
+        }
+
+
+        .card-photo {
+
+            width: 120px;
+
+            height: 120px;
+
+            border-radius: 50%;
+
+            border: 5px solid white;
+
+            overflow: hidden;
+
+            margin-bottom: 20px;
+        }
+
+
+        .card-photo img {
+
+            width: 100%;
+            height: 100%;
+
+            object-fit: cover;
+        }
+
+
+        .to-you {
+
+            font-family: cursive;
+
+            color: white;
+
+            font-size: 25px;
+
+            margin-bottom: 15px;
+        }
+
+
+        .card-title {
+
+            color: white;
+
+            font-family: Arial, sans-serif;
+
+            font-size: 45px;
+
+            font-weight: bold;
+
+            line-height: 0.9;
+
+            text-shadow: 3px 3px 5px rgba(0,0,0,0.2);
+        }
+
+
+        /* =========================
+           RIGHT SIDE CARD
+        ========================== */
+
+        .card-right {
+
+            width: 58%;
+
+            background: #f87987;
+
+            padding: 35px;
+
+            color: white;
+
+            overflow-y: auto;
+        }
+
+
+        .card-right h2 {
+
+            font-family: cursive;
+
+            font-size: 35px;
+
+            margin-bottom: 20px;
+
+            text-align: center;
+        }
+
+
+        .message {
+
+            font-family: cursive;
+
+            font-size: 18px;
+
+            line-height: 1.8;
+
+            white-space: pre-line;
+        }
+
+
+        .signature {
+
+            margin-top: 25px;
+
+            text-align: right;
+
+            font-family: cursive;
+
+            font-size: 25px;
+        }
+
+
+        /* =========================
+           MOBILE
+        ========================== */
+
+        @media(max-width: 800px) {
+
+            .left-content {
+
+                left: 5%;
+                top: 18%;
+            }
+
+            .happy,
+            .birthday {
+
+                font-size: 42px;
+
+                -webkit-text-stroke: 2px #292929;
+
+                text-shadow:
+                    4px 4px 0px #292929;
+            }
+
+            .photo-area {
+
+                right: 5%;
+                top: 42%;
+            }
+
+            .photo-circle {
+
+                width: 200px;
+                height: 200px;
+            }
+
+            .name-label {
+
+                width: 190px;
+
+                font-size: 18px;
+            }
+
+            .card {
+
+                flex-direction: column;
+
+                max-height: 90vh;
+
+                overflow-y: auto;
+            }
+
+            .card-left,
+            .card-right {
+
+                width: 100%;
+
+                border-right: none;
+            }
+
+            .card-left {
+
+                border-bottom: 4px solid white;
+            }
+
+            .card-title {
+
+                font-size: 35px;
+            }
+
+        }
+
+    </style>
+
+</head>
+
+
+<body>
+
+
+    <!-- =====================================
+         MAIN BIRTHDAY PAGE
+    ====================================== -->
+
+    <div class="birthday-page">
+
+
+        <!-- TOP FLAGS -->
+
+        <div class="top-decoration">
+
+            <div class="flag flag1"></div>
+            <div class="flag flag2"></div>
+            <div class="flag flag3"></div>
+            <div class="flag flag4"></div>
+
+            <div class="flag flag5"></div>
+            <div class="flag flag6"></div>
+            <div class="flag flag7"></div>
+            <div class="flag flag8"></div>
+
+        </div>
+
+
+        <!-- STARS -->
+
+        <div class="star star1">✦</div>
+        <div class="star star2">✦</div>
+        <div class="star star3">✦</div>
+        <div class="star star4">✦</div>
+
+
+        <!-- BALLOONS -->
+
+        <div class="balloon pink balloon1"></div>
+
+        <div class="balloon yellow balloon2"></div>
+
+        <div class="balloon red balloon3"></div>
+
+
+        <!-- LEFT CONTENT -->
+
+        <div class="left-content">
+
+            <div class="happy">
+                Happy
+            </div>
+
+            <div class="birthday">
+                Birthday
+            </div>
+
+
+            <!-- CHANGE DATE HERE -->
+
+            <div class="date">
+                ★ &nbsp; 23 September &nbsp; ★
+            </div>
+
+
+            <!-- BUTTON -->
+
+            <button
+                class="message-button"
+                onclick="openCard()"
+            >
+
+                Click Here My Dudu 💌
+
+            </button>
+
+        </div>
+
+
+
+        <!-- RIGHT PHOTO -->
+
+        <div class="photo-area">
+
+
+            <!-- CHANGE PHOTO NAME HERE -->
+
+            <div class="photo-circle">
+
+                <img
+                    src="Meri jaan.jpeg"
+                    alt="Meri jaan"
+                >
+
+            </div>
+
+
+            <!-- CHANGE NAME HERE -->
+
+            <div class="name-label">
+
+                Dear My Haider ❤️
+
+            </div>
+
+        </div>
+
+
+    </div>
+
+
+
+    <!-- =====================================
+         CARD POPUP
+    ====================================== -->
+
+    <div
+        class="card-overlay"
+        id="cardOverlay"
+    >
+
+
+        <!-- CLOSE BUTTON -->
+
+        <div
+            class="close"
+            onclick="closeCard()"
+        >
+
+            ×
+
+        </div>
+
+
+
+        <!-- CARD -->
+
+        <div class="card">
+
+
+            <!-- LEFT SIDE -->
+
+            <div class="card-left">
+
+
+                <div class="card-photo">
+
+                    <img
+                        src="Meri jaan.jpeg"
+                        alt="Meri jaan"
+                    >
+
+                </div>
+
+
+                <div class="to-you">
+
+                    Meri Jaan k Totay! ❤️
+
+                </div>
+
+
+                <div class="card-title">
+
+                    HAPPY<br>
+                    BIRTHDAY
+
+                </div>
+
+
+            </div>
+
+
+
+            <!-- RIGHT SIDE -->
+
+            <div class="card-right">
+
+
+                <h2>
+
+                    My Love ❤️
+
+                </h2>
+
+
+                <!-- =================================
+                     WRITE YOUR FEELINGS BELOW
+                ================================== -->
+
+                <div class="message">
+
+Meri jaan,
+
+Happiest Birthday meri jaan ..Allah apko bht bht ziada khushian dy .. Apki Umar daraz ho .. Apki sari duaen kabool hon Ameen …mujy ap sy bht bht bhtt bhtttt ziadaa pyar h ..itna k m ap k bgair rehny ka soch b ni skti .. m har saans m sirf apko yaad krti hn .. m ny apni puri zindagi k liye sirf apko he socha hwa h kisi or ka khyal b ni soch skti .. I love youu soo muchh .. i love your everything … i genuinely notice everything about you when that way you look at me and the way you smile with ur close tiny eyes ..the way you care for me in person but online krna shaid ab bhool jaty ho .. but khair i know when we start live together after marriage you will change .. I will help you to change just like you were ..I love you soo much Ap jesy b hojaoo ..I will love you insanely .. You are my everything..I just want k ap mujy chhoro mat kbi .. m bhi kabi ni chahun gi k ap apny maa baap k against jaa kr muj sy shadi kro lekin ap atleast mujy to mat chhoro .. I love you like ur mama does .. jesy ap unko ni chhor skty please mujy b ni chhorna kabi .. 
+Agr incase m kabhi Ap k sath ni b hn to lekin phr b Ap mujy apny mushkil waqt m yd kr skty ho I will always stand behind you. 
+Oh Its your birthday! Sorry apny he dukhry ly kr beth gayi thi .. I hope i will never see you with another girl 😗.. Or baki mzay kroo enjoy krooo khaoo peeeooo sab kroo lekin mery sathhhhh 🔪.. mery kuchu puchuu mery duduu sony kakayyyyy ummmmmmmmmmmmmmmmmaaaaaaaaaaaahhhhhhhhhhh💋💋💋💋 Ap merii jaan k tukry ni hoo 
+Ap to meri puri jaaaan hoo 😽
+Mera sab kuchhh ho ..Ap ho to sab h .. Ap ni ho to kuch ni h 🌷
+Allah karyy Apko har morr pr m he milun .. Allah kry main kabi b apka peecha na chhorun😋.. I love youuuu soooo muchhhh i love you love youuuuuuu muuuuwaaaaaaaahhhhh💋💋💋💋💋💋💋💋💋💋💋
+Happiest Birthday my guggay 🥹🦋 ❤️
+
+Happy Birthday once again, my love. 🎂🎈
+
+                </div>
+
+
+                <div class="signature">
+
+                    Apki Bubu ❤️
+
+                </div>
+
+
+            </div>
+
+
+        </div>
+
+
+    </div>
+
+
+
+    <!-- =====================================
+         JAVASCRIPT
+    ====================================== -->
+
+    <script>
+
+
+        function openCard() {
+
+            document
+                .getElementById("cardOverlay")
+                .classList
+                .add("active");
+
+        }
+
+
+        function closeCard() {
+
+            document
+                .getElementById("cardOverlay")
+                .classList
+                .remove("active");
+
+        }
+
+
+        /* Close card when clicking outside */
+
+        document
+            .getElementById("cardOverlay")
+            .addEventListener("click", function(event) {
+
+                if (event.target === this) {
+
+                    closeCard();
+
+                }
+
+            });
+
+
+    </script>
+
+
+</body>
+
+</html>
